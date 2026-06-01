@@ -7,25 +7,36 @@ James/JJ 的个人 Agent 工作流 Skill 集合。
 - `jjskill`：个人工作流主入口，用于判断材料整理、方案评估、会议推进等任务应该进入哪个具体工作流。
 - `jjskill-doc-to-decision-artifacts`：把项目文档、技术评估、会议纪要、需求草稿等材料，通过交互共创，整理成可沟通、可决策、可推进的产物。
 
-## 安装到 Codex
+## 安装方式
 
-将 `skills` 目录下的 Skill 文件夹复制到 Codex skills 目录：
+### 方式 1：通过 skills CLI 安装
 
-```powershell
-Copy-Item -Recurse -Force .\skills\jjskill C:\Users\james\.codex\skills\
-Copy-Item -Recurse -Force .\skills\jjskill-doc-to-decision-artifacts C:\Users\james\.codex\skills\
+如果你的 Agent 环境支持 `skills` CLI，可直接安装整个仓库：
+
+```bash
+npx -y skills https://github.com/JamesLauv/jjskill -g --all
 ```
 
-重启或开启新的 Codex 会话后，在 Available skills 中应能看到：
+### 方式 2：直接让 Agent 安装
 
-- `jjskill`
-- `jjskill-doc-to-decision-artifacts`
+把下面这句话发给支持安装 Skill 的 Agent：
 
-## 安装到其他 Agent
+```text
+安装这个 skill，GitHub 地址：https://github.com/JamesLauv/jjskill
+```
 
-如果目标 Agent 支持类似 `SKILL.md` 的本地技能目录机制，可将 `skills/<skill-name>/SKILL.md` 复制到对应目录。
+Agent 会根据自身的 Skill / Workflow / Rule 机制读取并安装仓库中的 Skill。
 
-如果目标 Agent 不支持 Skill 机制，可以把 `SKILL.md` 的正文作为该 Agent 的项目规则、系统提示或工作流说明使用。
+## 仓库结构
+
+```text
+skills/
+  jjskill/
+    SKILL.md
+
+  jjskill-doc-to-decision-artifacts/
+    SKILL.md
+```
 
 ## 建议使用方式
 
