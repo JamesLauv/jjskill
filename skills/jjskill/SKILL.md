@@ -1,8 +1,10 @@
 ---
 name: jjskill
-description: Personal work artifact router for James/JJ. Trigger: /jjskill, jjskill, JJ Skill, 工作流主入口, 帮我看看, 整理一下. Use when the user provides project materials, meeting notes, customer requirements, sales/pre-sales content, technical evaluations, internal communication drafts, or scattered business documents and asks to 整理, 分析, 帮我看看, 做成沟通材料, 生成决策材料, 推进表, 方案对比, 汇报材料, choose an output format, or route the work to the right jjskill-* workflow such as jjskill-doc-to-decision-artifacts.
+description: |
+  James/JJ 个人工作流主入口。用于项目材料、会议纪要、客户需求、售前材料、技术评估、内部沟通草稿等开放式工作材料的路由。
+  触发方式：/jjskill、jjskill、JJ Skill、工作流主入口、「帮我看看」「整理一下」「做成沟通材料」「生成决策材料」「推进表」「方案对比」「汇报材料」。
+  当用户需要选择输出格式，或需要路由到 jjskill-* 工作流（如 jjskill-doc-to-decision-artifacts）时使用。
 ---
-
 # JJ Skill 主入口
 
 这是个人工作流路由 Skill。用于判断用户给出的材料或任务应该进入哪类 `jjskill-*` 工作流。
