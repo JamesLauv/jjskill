@@ -1,6 +1,6 @@
-﻿---
+---
 name: jjskill-doc-to-decision-artifacts
-description: Turn project documents, technical evaluations, meeting notes, requirement drafts, or scattered business materials into decision-ready communication artifacts through an interactive co-creation workflow. Use when the user provides a document or document content and wants analysis, summary, internal communication material, 方案评估, 决策材料, 沟通材料, HTML, drawio, Excel, Markdown, 飞书文档, 会议推进表, or asks to organize content for team alignment, 方案敲定, 评审, 推进, stakeholder confirmation, or meeting decisions.
+description: Turn project documents, technical evaluations, meeting notes, requirement drafts, or scattered business materials into decision-ready communication artifacts through an interactive co-creation workflow. Trigger: /jjskill-doc-to-decision-artifacts, jjskill-doc-to-decision-artifacts, 文档到决策材料, 决策材料共创. Use when the user provides a document or document content and wants analysis, summary, internal communication material, 方案评估, 决策材料, 沟通材料, HTML, drawio, Excel, Markdown, 飞书文档, 会议推进表, or asks to organize content for team alignment, 方案敲定, 评审, 推进, stakeholder confirmation, or meeting decisions.
 ---
 
 # 文档到决策材料共创
