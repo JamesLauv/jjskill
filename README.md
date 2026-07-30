@@ -6,6 +6,7 @@ James/JJ 的个人 Agent 工作流 Skill 集合。
 
 - `jjskill`：个人工作流主入口，用于判断材料整理、方案评估、会议推进等任务应该进入哪个具体工作流。
 - `jjskill-doc-to-decision-artifacts`：把项目文档、技术评估、会议纪要、需求草稿等材料，通过交互共创，整理成可沟通、可决策、可推进的产物。
+- `jjskill-multi-source-restructure`：把多份多格式资料（图片、PPT、Word、Excel等），提取内容、融合去重、建立统一逻辑框架，输出为结构化的多格式产物（drawio/svg/html/xlsx）。
 
 ## 安装方式
 
@@ -36,7 +37,29 @@ skills/
 
   jjskill-doc-to-decision-artifacts/
     SKILL.md
+
+  jjskill-multi-source-restructure/
+    SKILL.md
+    scripts/
+      extract_pptx.py
+      extract_docx.py
+      gen_excel.py
+    references/
+      output_formats.md
 ```
+
+## 路由关系
+
+```text
+jjskill (主入口)
+├── jjskill-doc-to-decision-artifacts   单文档 → 决策材料
+└── jjskill-multi-source-restructure    多源 → 逻辑重构
+```
+
+路由判断：
+- 1份文档 + 做决策 → `jjskill-doc-to-decision-artifacts`
+- 多份/多格式资料 + 整理逻辑 → `jjskill-multi-source-restructure`
+- 图片截图要整理 → `jjskill-multi-source-restructure`
 
 ## 建议使用方式
 
@@ -46,10 +69,16 @@ skills/
 使用 jjskill，帮我看看这份材料，整理成适合内部沟通和推进的产物。
 ```
 
-明确要做“文档到决策材料”时，直接触发：
+明确要做"文档到决策材料"时，直接触发：
 
 ```text
 使用 jjskill-doc-to-decision-artifacts，读取这份技术评估文档，先分析，再跟我交互确认输出格式。
+```
+
+有多份资料需要整理逻辑时，直接触发：
+
+```text
+使用 jjskill-multi-source-restructure，把这几份截图和PPT整理成流程图。
 ```
 
 ## 版本维护建议
