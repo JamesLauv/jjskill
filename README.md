@@ -6,6 +6,7 @@ James/JJ 的个人 Agent 工作流 Skill 集合。
 
 - `jjskill`：个人工作流主入口，用于判断材料整理、方案评估、会议推进等任务应该进入哪个具体工作流。
 - `jjskill-doc-to-decision-artifacts`：把项目文档、技术评估、会议纪要、需求草稿等材料，通过交互共创，整理成可沟通、可决策、可推进的产物。
+- `jjskill-demo-test-framework`：分析客户业务文档，生成智能客服/对话式AI产品的Demo测试框架（测试脚本、流程图、WEB对话模拟、用例跟踪表）。
 - `jjskill-multi-source-restructure`：把多份多格式资料（图片、PPT、Word、Excel等），提取内容、融合去重、建立统一逻辑框架，输出为结构化的多格式产物（drawio/svg/html/xlsx）。
 
 ## 安装方式
@@ -38,6 +39,9 @@ skills/
   jjskill-doc-to-decision-artifacts/
     SKILL.md
 
+  jjskill-demo-test-framework/
+    SKILL.md
+
   jjskill-multi-source-restructure/
     SKILL.md
     scripts/
@@ -52,12 +56,14 @@ skills/
 
 ```text
 jjskill (主入口)
-├── jjskill-doc-to-decision-artifacts   单文档 → 决策材料
+├── jjskill-doc-to-decision-artifacts    单文档 → 决策材料
+├── jjskill-demo-test-framework         客户文档 → Demo测试框架
 └── jjskill-multi-source-restructure    多源 → 逻辑重构
 ```
 
 路由判断：
 - 1份文档 + 做决策 → `jjskill-doc-to-decision-artifacts`
+- 客户业务文档 + Demo测试/测试脚本/对话模拟/流程图标注 → `jjskill-demo-test-framework`
 - 多份/多格式资料 + 整理逻辑 → `jjskill-multi-source-restructure`
 - 图片截图要整理 → `jjskill-multi-source-restructure`
 
@@ -79,6 +85,12 @@ jjskill (主入口)
 
 ```text
 使用 jjskill-multi-source-restructure，把这几份截图和PPT整理成流程图。
+```
+
+需要做智能客服Demo测试时，直接触发：
+
+```text
+使用 jjskill-demo-test-framework，分析这个客户的售后流程文档，生成测试脚本和对话模拟。
 ```
 
 ## 版本维护建议
