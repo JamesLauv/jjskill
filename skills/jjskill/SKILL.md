@@ -41,6 +41,21 @@ description: |
 - 方案优劣势对比
 - 多方确认事项整理
 
+### jjskill-demo-test-framework
+
+用于分析客户业务文档，生成智能客服/对话式AI产品的Demo测试框架，包括测试脚本、对话流程图、WEB端交互模拟、测试用例跟踪表。
+
+适用场景：
+
+- 客户给了业务流程文档，需要出Demo测试方案
+- 售前阶段需要生成智能客服的测试脚本和验证框架
+- 需要退货/售后/咨询等场景的完整流程图（含技术节点标注）
+- 需要WEB端对话窗口模拟（HTML可交互）
+- 需要对话内容+技术实现备注的Excel跟踪表
+- Demo演示前的准备工作
+
+关键区别：这个Skill聚焦于**Demo测试与验证**，产出物面向售前演示和内部测试，不是通用决策材料。
+
 ### jjskill-multi-source-restructure
 
 用于把多份多格式资料（图片、PPT、Word、Excel等），提取内容、融合去重、建立统一逻辑框架，输出为结构化的多格式产物。
@@ -57,6 +72,7 @@ description: |
 ## 路由判断
 
 - 用户给**一份文档** + 要做决策/评估/沟通 → `jjskill-doc-to-decision-artifacts`
+- 用户给**客户业务文档** + 要做Demo测试/测试脚本/对话模拟/流程图标注 → `jjskill-demo-test-framework`
 - 用户给**多份/多格式资料** + 要整理逻辑/流程/结构 → `jjskill-multi-source-restructure`
 - 用户给了**图片截图**要整理 → `jjskill-multi-source-restructure`
 - 不确定 → 问 1 个关键问题："你有几份资料？最终要用来做什么？"
